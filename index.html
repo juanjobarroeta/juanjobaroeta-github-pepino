@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="spa">
+
+<head>
+    <title>Encuesta Pepino</title>
+    <style type="text/css">
+        body {
+            background-color: #3f5d54;
+        }
+
+        div {
+            font-family: 'Courier New', Courier, monospace;
+            border: rgb(245, 244, 242);
+            border-inline-color: wheat;
+            background-color: ghostwhite;
+            padding: 100px;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: #3f5d54;
+        }
+
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            color: #3f5d54;
+        }
+
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            height: 40px;
+            width: 300px;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            border-inline-end: 10px;
+        }
+
+        fieldset {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0px;
+            border-style: groove;
+            border-color: rgb(74, 74, 74);
+            border-width: 3px;
+            background-size: 100px;
+            background-color: rgba(248, 248, 255, 0.406);
+        }
+
+        input {
+            font-family: 'Courier New', Courier, monospace;
+            vertical-align: 20px;
+            margin: 50px;
+            align-items: center;
+            align-self: center;
+            padding: 15px;
+            border-color: rgb(43, 43, 42);
+            border-style: ridge;
+            border-width: 1px;
+            background-size: 10px;
+            background-color: white;
+        }
+
+        option {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 50px;
+            align-items: center;
+            align-self: center;
+            padding: 15px;
+            border-color: rgb(43, 43, 42);
+            border-style: ridge;
+            border-width: 1px;
+            background-size: 10px;
+            background-color: white;
+        }
+
+        select {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 50px;
+            align-items: center;
+            align-self: center;
+            padding: 15px;
+            border-color: rgb(43, 43, 42);
+            border-style: ridge;
+            border-width: 1px;
+            background-size: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<!-- Comienza Encuesta-->
+</body>
+
+</html>
+<form action="">
+    <div id="bitacora">
+
+        <legend>
+            <h1>Bitacora diaria de información</h1>
+        </legend>
+        <p>Llene la bitacora a continuación</p>
+
+        <!-- Elegir fecha-->
+        <div id="fecha">
+            <fieldset>
+                <legend>
+                    <h2> Fecha</h2>
+                </legend>
+                <br>
+                <input type="date" name="Fecha" id="fecha">
+            </fieldset>
+        </div>
+        <!-- Termina fecha-->
+        <!-- Elegir modulo en el cuál se esta recabando la información-->
+        <div id="módulo">
+            <fieldset>
+                <legend>
+                    <h2>Elija el módulo</h2>
+                </legend>
+                <select name="módulo" id="módulo">
+                    <option value="ninguno">Elije un módulo</option>
+                    <option value="M1A">M1 A</option>
+                    <option value="M1B">M1 B</option>
+                    <option value="M2">M2</option>
+                    <option value="M3">M3</option>
+                    <option value="M4">M4</option>
+                    <option value="M5">M5</option>
+                    <option value="M6">M6</option>
+                    <option value="M7">M7</option>
+                </select>
+            </fieldset>
+        </div>
+        <!-- Elegir modulo en el cuál se esta recabando la información-->
+        <!-- Elegir el ciclo en el que se encuentra el módulo-->
+        <div id="ciclo">
+            <fieldset>
+                <legend>
+                    <h2>Seleccióne la fase del ciclo en que se encuentra</h2>
+                </legend>
+                <input type="radio" name="Descanso" id="descanso"> Descanso
+                <input type="radio" name="Preparación" id="preparacion"> Preparación
+                <input type="radio" name="Siembra" id="siembra"> Siembra
+                <input type="radio" name="Cosecha" id="cosecha"> Cosecha
+            </fieldset>
+        </div>
+        <!-- Termina Ciclo-->
+        <!-- Indicar si hay cosecha o no-->
+        <div id="cosecha">
+            <fieldset>
+                <legend>
+                    <h2> ¿Habrá cosecha el día de hoy?</h2>
+                </legend>
+                <input type="radio" name="Cosecha" id="cosecha_si"> Si
+                <input type="radio" name="Cosecha" id="cosecha_no"> No
+            </fieldset>
+        </div>
+        <!-- Termina cosecha-->
+        <!-- Indicar horas de riego-->
+        <div id="riego">
+            <fieldset>
+                <legend>
+                    <h2>¿Tiempo de Riego?</h2>
+                </legend>
+
+                <input type="text" name="Tiempo_riego" id="tiempo_riego">minutos<br>
+            </fieldset>
+        </div>
+        <!-- Termina riego-->
+        <!-- Especificar si hay enfermedades o no -->
+        <div id="enfermedades">
+            <fieldset>
+                <legend>
+                    <h2>Hay enfermedades presentes en la planta?</h2>
+                </legend>
+                <input type="radio" name="Enfermedades" id="enfermedades_no">
+                <label for="enfermedades_no">No</label>
+                <input type="radio" name="Nematodos" id="nematodos">
+                <label for="nematodos">Nematoodos</label>
+                <input type="radio" name="Mosca" id="mosca">
+                <label for="mosca">Mosca Blanca</label>
+                <input type="radio" name="X" id="x">
+                <label for="x">X</label>
+                <input type="radio" name="Y" id="y">
+                <label for="y">Y</label>
+            </fieldset>
+        </div>
+        <!-- Termina enfermedades-->
+        <!-- Especificar alimentación-->
+        <div id="alimentación">
+            <fieldset>
+                <legend>
+                    <h2>¿Qué alimentación se le dio el día de hoy?</h2>
+                </legend>
+                <input type="radio" name="alimentación_no" id="alimentación_no"><label for="alimentación_no">
+                    Ninguna</label><br>
+                <input type="radio" name="Kts" id="Kts"><label for="Kts"> Kts</label>
+                <input type="text" name="Kts" id="Kts_t"><label for="kts_t"> Litros</label> <br>
+                <input type="radio" name="N.28" id="N.28"> <label for="N.28"> N.28</label>
+                <input type="text" name="N.28" id="N.28_t"> <label for="N.28_t"> Litros</label> <br>
+                <input type="radio" name="11. 37." id="11.37."> <label for="11.37."> 11. 37.</label>
+                <input type="text" name="11.37" id="11.n 37._t"><label for="11.n 37._t"> Litros</label><br>
+                <input type="radio" name="Humus Liquido" id="Humus Liquido"> <label for="Humus Liquido">
+                    Humus
+                    Liquido</label>
+                <input type="text" name="Humus Liquido" id="Humus Liquido_t"> <label for="Humus Liquido_t">
+                    Litros</label><br>
+                <input type="radio" name="Nit Calcio" id="Nit Calcio"> <label for="Nit Calcio"> Nit
+                    Calciov</label>
+
+                <input type="text" name="Nit Calcio" id="Nit Calcio_t"> <label for="Nitt Calcio_t">
+                    Kilogramos</label>
+                <br>
+
+                <input type="radio" name="Sul MG" id="Sul MG"><label for="Sul MG">Sul MG</label>
+                <input type="text" name="Sul MG" id="Sul MG_t"> <label for="Sul MG_t">
+                    Kilogramos</label><br>
+                <input type="radio" name="Sul Fe" id="Sul Fe"> <label for="Sul Fe"> Sul Fe</label>
+                <input type="text" name="Sul Fe" id="Sul Fe_t"><label for="Sul Fe_t"> Kilogramos</label><br>
+                <input type="radio" name="Sul Zinc" id="Sul Zinc"> <label for="Sul Zinc"> Sul Zinc</label>
+                <input type="text" name="Sul Zinc" id="Sul Zinc_t"> <label for="Sul Zinc_t">
+                    Kilogramos</label><br>
+                <input type="radio" name="Boro" id="Boro"> <label for="Boro"> Boro</label>
+                <input type="text" name="Boro" id="Boro_t"><label for="Boro_t"> Kilogramos</label>
+            </fieldset>
+        </div>
+        <!-- Termina alimentación-->
+        <!-- Especificar fumigación-->
+        <div id="fumigación">
+            <fieldset>
+                <legend>
+                    <h2>¿Que fumigación se aplicó el día de hoy?</h2>
+                </legend>
+                <input type="radio" name="fumigación_no" id="fumigación_no"><label for="fumigación_no">
+                    Ninguna</label><br>
+                <input type="radio" name="Entrus" id="entrus"><label for="entrus">Entrus</label>
+                <input type="text" name="Entrus" id="entrus_t"><label for="entrus_t"> Mililitros</label><br>
+                <input type="radio" name="Pyriban" id="pyriban"><label for="pyriban">Pyriban</label>
+                <input type="text" name="Pyrban" id="pyrban_t"><label for="pyriban_t">
+                    Mililitros</label><br>
+                <input type="radio" name="Agriver" id="agriver"><label for="agriver"> Agriver</label>
+                <input type="text" name="Agriver" id="agriver_t"><label for="agriver_t"> Gramos</label><br>
+                <input type="radio" name="Buffex" id="buffex"><label for="buffex"> Humus Liquido</label>
+                <input type="text" name="Buffex" id="buffex_t"><label for="buffex_t"> Milimetros</label><br>
+                <input type="radio" name="Breackthru" id="Breackthru"><label for="Breackthru"> Nit
+                    Calcio</label>
+                <input type="text" name="Breackthru" id="breackthru_t"><label for="breackthru_t">
+                    Litros</label><br>
+                <input type="radio" name="Hummus" id="Humus"><label for="Humus">Nit Calcio</label>
+                <input type="text" name="Hummus" id="humus_t"><label for="humus_t">Litros</label><br>
+            </fieldset>
+        </div>
+        <!-- Termina fumigación-->
+
+
+    </div>
+    <input type="submit" value="Enviar">
+</form>
+</body>
+
+</html>
